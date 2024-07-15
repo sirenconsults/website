@@ -2974,6 +2974,17 @@ svg text {
   font-size: 250px; /* Adjust font size as needed */
   fill: transparent;
 }
+.discover {
+  font-size: 200px !important;
+  padding-bottom: 150px !important;
+}
+.the {
+  font-weight: 300;
+}
+.power {
+  font-size: 300px;
+  color: var(--orange);
+}
 
 @media (max-width: 768px) {
   svg text {
