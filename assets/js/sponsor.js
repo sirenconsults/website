@@ -1,7 +1,7 @@
 Swal.fire({
   title: " Start a building project?",
   html: `
-  <h1 class="text-center display-1 "> <span class="bi bi-pen-fill text-warning"></span></h1>    
+  <h1 class="text-center display-1 "> <span class="bi bi-house-gear-fill text-warning"></span></h1>    
  
   <p><a class="btn btn-light mr-2 m-2" onclick="Swal.close()">Not Yet</a><a class="btn btn-warning m-2" onclick="contact()">Yes please</a></p>
      
