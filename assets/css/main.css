@@ -2975,15 +2975,17 @@ svg text {
   fill: transparent;
 }
 .discover {
-  font-size: 200px !important;
-  padding-bottom: 150px !important;
+  font-size: 150px !important;
+  padding-bottom: 50px !important;
 }
 .the {
-  font-weight: 300;
+  font-weight: 300 !important;
+  font-size: 100px;
 }
 .power {
-  font-size: 300px;
+  font-size: 230px;
   color: var(--orange);
+  font-weight: 900;
 }
 
 @media (max-width: 768px) {
