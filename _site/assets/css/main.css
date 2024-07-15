@@ -2996,6 +2996,19 @@ svg text {
     font-size: 230px; /* Adjust font size as needed */
     fill: transparent;
   }
+  .discover {
+    font-size: 50px !important;
+    padding-bottom: 50px !important;
+  }
+  .the {
+    font-weight: 150 !important;
+    font-size: 80px;
+  }
+  .power {
+    font-size: 100px;
+    color: var(--orange);
+    font-weight: 800;
+  }
 }
 
 @keyframes stroke {
