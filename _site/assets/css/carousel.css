@@ -1,0 +1,177 @@
+:root {
+  --main-white-color: white;
+  --main-black-color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.static {
+  position: static;
+}
+
+.cover {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cover .background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.owl-slide-text {
+  position: relative;
+  z-index: 1;
+}
+
+.owl-carousel .owl-slide {
+  margin-top: 0px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.owl-carousel .owl-slide-animated {
+  transform: translateX(20px);
+  transition: all 0.5s ease; /* Adjusted transition for consistency */
+}
+
+.owl-carousel .owl-slide-animated.is-transitioned {
+  transform: none;
+}
+
+.owl-carousel .owl-slide-title.is-transitioned {
+  transition-delay: 0.2s;
+}
+
+.owl-carousel .owl-slide-subtitle.is-transitioned {
+  transition-delay: 0.35s;
+}
+
+.owl-carousel .owl-slide-cta.is-transitioned {
+  transition-delay: 0.5s;
+}
+
+.owl-carousel .owl-dots,
+.owl-carousel .owl-nav {
+  position: absolute;
+}
+
+.owl-carousel .owl-dots .owl-dot,
+.owl-carousel .owl-nav [class*="owl-"]:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  background: transparent;
+  border: 1px solid var(--main-black-color);
+  transition: all 0.2s ease;
+}
+
+.owl-carousel .owl-dots .owl-dot:hover span,
+.owl-carousel .owl-dots .owl-dot.active span {
+  background: var(--main-black-color);
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%; /* Adjust position from the top */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.owl-carousel .owl-nav button {
+  background: var(--main-white-color); /* White background */
+  border: none;
+  border-radius: 50%; /* Circular buttons */
+  padding: 10px; /* Add some padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+}
+
+.owl-carousel .owl-nav svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-black-color); /* Set fill color */
+  transition: fill 0.3s, transform 0.3s;
+}
+
+.owl-carousel .owl-nav button:hover svg {
+  fill: var(--main-black-color); /* Ensure fill color on hover */
+  transform: scale(1.1);
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  left: 10px;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  right: 10px;
+}
+
+section {
+  display: none;
+}
+
+/* Small Screens */
+@media screen and (max-width: 575px) {
+  .display-1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .owl-carousel .owl-nav svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cover {
+    margin-top: 100px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .cover .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .owl-slide-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .owl-carousel .owl-slide {
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+  }
+}
