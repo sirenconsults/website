@@ -2975,7 +2975,7 @@ svg text {
   fill: transparent;
 }
 .discover {
-  font-size: 150px !important;
+  font-size: 100px !important;
   padding-bottom: 50px !important;
 }
 .the {
@@ -2983,7 +2983,7 @@ svg text {
   font-size: 100px;
 }
 .power {
-  font-size: 230px;
+  font-size: 200px;
   color: var(--orange);
   font-weight: 900;
 }
