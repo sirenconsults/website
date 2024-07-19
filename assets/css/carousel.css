@@ -24,6 +24,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
@@ -34,8 +35,11 @@
 }
 
 .owl-carousel .owl-slide {
-  background-size: cover;
-  background-position: center;
+  margin-top: 0px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
 }
 
 .owl-carousel .owl-slide-animated {
@@ -157,6 +161,7 @@ section {
     width: 100%;
     object-fit: cover;
     z-index: -1;
+    background-repeat: no-repeat;
   }
 
   .owl-slide-text {
@@ -170,5 +175,6 @@ section {
     width: 100%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
   }
 }

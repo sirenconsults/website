@@ -2958,13 +2958,16 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px; /* Adjust height as needed */
-  overflow: hidden; /* Prevent text from overflowing */
 }
-
+.siren-svg {
+  width: 100%;
+  height: auto;
+}
 svg {
   font-family: "Poppins", sans-serif;
   font-weight: 900;
+  width: 100%;
+  height: auto;
 }
 
 svg text {
@@ -2973,6 +2976,9 @@ svg text {
   stroke: #000000;
   font-size: 250px; /* Adjust font size as needed */
   fill: transparent;
+}
+.construction {
+  font-size: 100px !important;
 }
 .discover {
   font-size: 100px !important;
@@ -3018,6 +3024,21 @@ svg text {
     font-size: 100px;
     color: var(--orange);
     font-weight: 800;
+  }
+}
+@media (min-width: 768px) {
+  svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 1;
+    stroke: #000000;
+    font-size: 300px; /* Adjust font size as needed */
+    fill: transparent;
+  }
+  .wrapper {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
