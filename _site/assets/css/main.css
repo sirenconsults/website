@@ -23,8 +23,8 @@ input {
     "Noto Color Emoji";
   --heading-font: "Poppins", sans-serif, system-ui;
   --nav-font: "Poppins", sans-serif;
-  --orange: #e5480a;
-  --darkorange: #fecf1d;
+  --red: #d21313;
+  --yellow: #fecf1d;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -2829,9 +2829,6 @@ section,
 .paragraph {
   color: #000000;
 }
-.bg-dark {
-  background-color: #000000 !important;
-}
 
 .jazz {
   margin-bottom: 70px;
@@ -2842,13 +2839,16 @@ section,
 }
 
 .blogslist li {
+  color: #000 !important;
   margin: 5px 10px;
   border-bottom: 1px solid #000000;
   padding: 10px;
 }
 .blogslist li:hover {
   font-size: 150%;
-  background-color: #ffe134;
+}
+.blogslist li a {
+  color: #d01f1f;
 }
 .swal2-popup {
   background-color: black !important;
@@ -2876,15 +2876,13 @@ section,
   font-style: italic;
 }
 .backlink {
-  color: var(--darkorange);
+  color: #d21313;
   text-decoration: underline;
 }
-.darkorange {
-  color: var(--darkorange);
+.text-danger {
+  color: var(--red) !important;
 }
-.kckyellow {
-  background-color: var(--orange);
-}
+
 .projecttitle {
   background-color: var(--orange);
 }
@@ -2935,17 +2933,12 @@ h4 {
   height: 80px;
 }
 
-.text-danger {
-  color: var(--darkorange) !important;
-}
 textarea {
   font-weight: 500;
   font-style: normal;
   font-size: 20px !important;
 }
-.text-primary {
-  color: #6610f2 !important;
-}
+
 .bank-icon {
   font-size: 200px !important;
 }
@@ -3065,4 +3058,17 @@ svg text {
     stroke-dasharray: 50% 0;
     stroke-width: 0;
   }
+}
+.bg-danger {
+  background-color: var(--red);
+}
+.bg-dark {
+  background-color: #000;
+}
+.text-dark {
+  color: #000;
+}
+.btn-dark {
+  color: #ffffff;
+  background-color: #000000;
 }
