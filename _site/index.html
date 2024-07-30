@@ -723,7 +723,7 @@ Team -->
       <div class="col-lg-6">
         <form id="contact-form" class="php-email-form" data-aos="fade-up">
           <div class="row gy-4">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <input
                 type="text"
                 name="name"
@@ -732,13 +732,23 @@ Team -->
                 required="" />
             </div>
 
-            <div class="col-md-6">
-              <input
-                type="email"
-                class="form-control"
-                name="email"
-                placeholder="Your Email"
-                required="" />
+            <div class="row m-0 mt-2">
+              <div class="col-md-6">
+                <input
+                  type="phone"
+                  class="form-control"
+                  name="phone"
+                  placeholder="Your Phone"
+                  required="" />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  placeholder="Your Email"
+                  required="" />
+              </div>
             </div>
 
             <div class="col-md-12">
@@ -758,9 +768,19 @@ Team -->
                 placeholder="Message"
                 required=""></textarea>
             </div>
+            <div class="form-check my-3">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="not-a-robot"
+                required />
+              <label class="form-check-label" for="not-a-robot"
+                >I am not a robot</label
+              >
+            </div>
 
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
+              <div class="loading">Sending...</div>
               <div class="error-message"></div>
               <div class="sent-message">
                 Your message has been sent. Thank you!
@@ -776,8 +796,14 @@ Team -->
   </div>
 </section>
 <!-- /Contact Section -->
-
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
+  (function () {
+    emailjs.init("Fw1cokoUW3A8YRfRO");
+  })();
+
   document
     .getElementById("contact-form")
     .addEventListener("submit", function (event) {
@@ -788,16 +814,27 @@ Team -->
       document.querySelector(".error-message").style.display = "none";
       document.querySelector(".sent-message").style.display = "none";
 
+      // Check if the checkbox is checked
+      var notARobot = document.getElementById("not-a-robot").checked;
+      if (!notARobot) {
+        document.querySelector(".loading").style.display = "none";
+        document.querySelector(".error-message").style.display = "block";
+        document.querySelector(".error-message").innerHTML =
+          "Please confirm you are not a robot.";
+        return;
+      }
+
       // Get the form data
       var templateParams = {
-        from_name: document.getElementsByName("name")[0].value,
-        from_email: document.getElementsByName("email")[0].value,
+        name: document.getElementsByName("name")[0].value,
+        email: document.getElementsByName("email")[0].value,
+        phone: document.getElementsByName("phone")[0].value,
         subject: document.getElementsByName("subject")[0].value,
         message: document.getElementsByName("message")[0].value,
       };
 
       // Send the email
-      emailjs.send("service_4vizpnc", "template_xb6tyky", templateParams).then(
+      emailjs.send("service_u0ofp09", "template_87xc88z", templateParams).then(
         function (response) {
           document.querySelector(".loading").style.display = "none";
           document.querySelector(".sent-message").style.display = "block";
@@ -806,7 +843,8 @@ Team -->
           document.querySelector(".loading").style.display = "none";
           document.querySelector(".error-message").style.display = "block";
           document.querySelector(".error-message").innerHTML =
-            "Failed to send email. Please try again later.";
+            "Failed to send email. Please try again later. Error: " +
+            JSON.stringify(error);
         }
       );
     });
@@ -930,12 +968,7 @@ Team -->
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
 
-  <script type="text/javascript" src="https://cdn.emailjs"></script>
-  <script type="text/javascript">
-    (function(){
-        emailjs.init("qqJnbf812rTIUEALz");
-    })();
-  </script>
+
   
 </body>
 </html>
