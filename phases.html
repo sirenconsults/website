@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "sketches"
-permalink: /sketches
+title: "phases"
+permalink: /phases
 titleAfter: ...Siren Construction Ltd.
 priority: 1.0
 ---
@@ -24,7 +24,34 @@ priority: 1.0
     </div>
   </section>
 
-  <section class="d-block">
+  <div class="row m-0" id="options">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row m-0">
+        <a onclick="showtempean()">
+          <div class="col-md-4">
+            <div class="m-1">
+              <h5 class="p-3">Tempean Estate Manyangwa</h5>
+              <img
+                src="assets/images/projects/t1.jpg"
+                class="img-fluid"
+                alt="" />
+              <p class="text-center my-1">
+                <a
+                  onclick="showtempean()"
+                  class="btn w-100 text-light btn-danger">
+                  See the phases
+                </a>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <section style="display: none" id="tempean">
     <div class="row d-block">
       <div class="col-md-1"></div>
       <div class="col-md-10">
@@ -251,5 +278,6 @@ priority: 1.0
     </div>
   </section>
 
+  <script src="assets/js/phases.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </main>
