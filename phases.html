@@ -279,5 +279,17 @@ priority: 1.0
   </section>
 
   <script src="assets/js/phases.js"></script>
+  <script>
+    window.onload = function () {
+      if (localStorage.getItem("showPhasesTempean") === "true") {
+        showtempean();
+        localStorage.removeItem("showPhasesTempean"); // Clear the flag
+      }
+      if (localStorage.getItem("showPhasesTempean") === "true") {
+        showgate();
+        localStorage.removeItem("showPhasesTempean"); // Clear the flag
+      }
+    };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </main>

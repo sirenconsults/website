@@ -381,6 +381,9 @@
               <h2 class="p-3 mb-4">All Blog Posts</h2>
               <ul class="list-unstyled my-5 blogslist">
                 
+                <li><a class="" href="/2024/08/07/blog-post-2.html">A Professional Touch!</a></li>
+
+                
                 <li><a class="" href="/2024/03/10/blog-post-1.html">Amazing Architecture !</a></li>
 
                 
@@ -395,6 +398,18 @@
   </section>
 
   <script src="assets/js/phases.js"></script>
+  <script>
+    window.onload = function () {
+      if (localStorage.getItem("showPhasesTempean") === "true") {
+        showtempean();
+        localStorage.removeItem("showPhasesTempean"); // Clear the flag
+      }
+      if (localStorage.getItem("showPhasesTempean") === "true") {
+        showgate();
+        localStorage.removeItem("showPhasesTempean"); // Clear the flag
+      }
+    };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </main>
 
