@@ -10,7 +10,6 @@
 }
 
 .static {
-  position: static;
 }
 
 .cover {
@@ -29,17 +28,19 @@
   z-index: -1;
 }
 
-.owl-slide-text {
-  position: relative;
-  z-index: 1;
+.owl-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
-.owl-carousel .owl-slide {
-  margin-top: 0px;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(255, 255, 255);
+.owl-slide .container {
+  height: 100%;
+}
+
+.owl-slide .row {
+  height: 100%;
 }
 
 .owl-carousel .owl-slide-animated {
@@ -167,14 +168,5 @@ section {
   .owl-slide-text {
     position: relative;
     z-index: 1;
-  }
-
-  .owl-carousel .owl-slide {
-    margin-top: 0px;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(255, 255, 255);
-    background-repeat: no-repeat;
   }
 }
