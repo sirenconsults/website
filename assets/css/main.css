@@ -3018,6 +3018,9 @@ svg text {
     color: var(--orange);
     font-weight: 800;
   }
+  .display-3 {
+    font-size: 28px !important;
+  }
 }
 @media (min-width: 768px) {
   svg text {
