@@ -3076,18 +3076,22 @@ svg text {
   background-color: #000000;
 }
 
-.cat-item h6{
+.cat-item h6 {
   font-size: 120%;
   color: #000000;
   padding: 10px;
   background-color: #ffb787;
   border-radius: 10px;
 }
-.cat-item i{
-  color: #e19461  !important;
+.cat-item i {
+  color: #e19461 !important;
   font-size: 100px !important;
 }
-.cat-item{
+.cat-item {
   background-color: #fffccc;
   border-radius: 150px !important;
+}
+
+.faint-bright-yellow {
+  background-color: #fff347;
 }
