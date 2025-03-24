@@ -3093,5 +3093,5 @@ svg text {
 }
 
 .faint-bright-yellow {
-  background-color: #fff347;
+  background-color: #fff347 !important;
 }
