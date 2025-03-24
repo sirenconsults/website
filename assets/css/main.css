@@ -3095,3 +3095,6 @@ svg text {
 .faint-bright-yellow {
   background-color: #fff347 !important;
 }
+#navmenu ul {
+  text-align: left !important;
+}
